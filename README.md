@@ -25,3 +25,7 @@
 Tabel `app_state` dan `users` dibuat otomatis oleh backend. Password pengguna di-hash menggunakan scrypt sebelum disimpan, dan frontend hanya menerima profil pengguna serta token sesi sementara.
 
 Jangan menyimpan `.env` ke repositori karena berisi token akses Turso.
+
+## Deploy ke Netlify
+
+Proyek sudah menyertakan `netlify.toml` dan Function API. Hubungkan repositori GitHub di Netlify, lalu masukkan Environment Variables berikut pada **Project configuration > Environment variables**: `TURSO_DATABASE_URL`, `TURSO_AUTH_TOKEN`, `ADMIN_USERNAME`, `ADMIN_PASSWORD`, `ADMIN_NAME`, `ADMIN_KODE_REG`, dan `APP_SESSION_SECRET`. Jangan unggah file `.env` ke GitHub atau Netlify.

@@ -1,10 +1,10 @@
 [build]
   publish = "public"
-  functions = "netlify/functions"
-  node_bundler = "esbuild"
 
 [functions]
+  directory = "netlify/functions"
   node_bundler = "esbuild"
+  external_node_modules = ["express"]
 
 [[redirects]]
   from = "/api/*"
